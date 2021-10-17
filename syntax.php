@@ -69,6 +69,7 @@ class syntax_plugin_publish extends DokuWiki_Syntax_Plugin {
         usort($pages, array($this,'_pagesorter'));
 
         // Output Table
+        $renderer->doc .= '<div class="apr_table_wrapper">';
         $renderer->doc .= '<table class="apr_table"><tr class="apr_head">';
         $renderer->doc .= '<th class="apr_page">' . $this->getLang('apr_p_hdr_page') . '</th>';
         $renderer->doc .= '<th class="apr_prev">' . $this->getLang('apr_p_hdr_previous') . '</th>';
@@ -125,7 +126,7 @@ class syntax_plugin_publish extends DokuWiki_Syntax_Plugin {
 
             //$renderer->doc .= '<tr><td colspan="3">' . print_r($page, true) . '</td></tr>';
         }
-        $renderer->doc .= '</table>';
+        $renderer->doc .= '</table></div>';
         return true;
     }
 

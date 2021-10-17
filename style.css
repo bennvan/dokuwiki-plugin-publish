@@ -65,6 +65,10 @@ div.approval span span.approval_date {
   display: inline;
 }
 
+div.apr_table_wrapper {
+  overflow-x: auto;
+}
+
 button.publish__approveNS {
     float: left;
 }
