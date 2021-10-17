@@ -29,7 +29,7 @@ jQuery( document ).ready(function () {
                 call: 'plugin_publish_approveNS',
                 namespace: namespace
             },
-            function(data) {
+            function(data, status) {
                 $_this.parent().parent().siblings('tr.apr_table').each(function(index) {
                         var id = jQuery(this).find('a').first().text();
                         var pageNamespace = id.substr(0,id.lastIndexOf(':'));
@@ -39,8 +39,7 @@ jQuery( document ).ready(function () {
                     }
                 );
                 $_this.parent().parent().hide('slow');
-            },
-            'json'
+            }
         );
     });
 });
